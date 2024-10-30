@@ -600,4 +600,554 @@ print(set3)
   <li>Tuples are written with round brackets.</li>
   </ol>
 
+<h1>Example:</h1>
+<h2>Create a Tuple:</h2>
+
+```python
+thistuple = ("apple", "banana", "cherry")
+print(thistuple)
+```
+
+
+<h1>Tuple Items</h1>
+<ol>
+  <li>Tuple items are ordered, unchangeable, and allow duplicate values.</li>
+
+  <li>Tuple items are indexed, the first item has index [0], the second item has index [1] etc.</li>
+</ol>
+
+<h2>Ordered</h2>
+<b>When we say that tuples are ordered, it means that the items have a defined order, and that order will not change.</b>
+
+<h2>Unchangeable</h2>
+<b>Tuples are unchangeable, meaning that we cannot change, add or remove items after the tuple has been created.</b>
+
+<h2>Allow Duplicates</h2>
+<b>Since tuples are indexed, they can have items with the same value:</b>
+
+<h1>Example</h1>
+<b>Tuples allow duplicate values:</b>
+
+```python
+thistuple = ("apple", "banana", "cherry", "apple", "cherry")
+print(thistuple)
+```
+
+<h1>Tuple Length</h1>
+<h2>To determine how many items a tuple has, use the len() function:</h2>
+
+<b>Example</b>
+<b>Print the number of items in the tuple:</b>
+
+```python
+thistuple = ("apple", "banana", "cherry")
+print(len(thistuple))
+
+```
+
+<h1>Access Tuple Items</h1>
+<h2>Access Tuple Items</h2>
+<h3>You can access tuple items by referring to the index number, inside square brackets:</h3>
+
+<b>ExampleGet your own Python Server</b>
+<b>Print the second item in the tuple:</b>
+```python
+
+thistuple = ("apple", "banana", "cherry")
+print(thistuple[1])
+
+```
+<h1>Negative Indexing</h1>
+<h2>Negative indexing means start from the end.</h2>
+
+<b>-1 refers to the last item, -2 refers to the second last item etc.</b>
+
+<b>Example</b>
+<b>Print the last item of the tuple:</b>
+
+```python
+
+thistuple = ("apple", "banana", "cherry")
+print(thistuple[-1])
+
+```
+<h1>Range of Indexes</h1>
+<h2>You can specify a range of indexes by specifying where to start and where to end the range.</h2>
+
+<h3>When specifying a range, the return value will be a new tuple with the specified items.</h3>
+
+<b>Example</b>
+<b>Return the third, fourth, and fifth item:</b>
+
+```python
+thistuple = ("apple", "banana", "cherry", "orange", "kiwi", "melon", "mango")
+print(thistuple[2:5])
+```
+<h1>Range of Negative Indexes</h1>
+<h2>Specify negative indexes if you want to start the search from the end of the tuple:</h2>
+
+<b>Example</b>
+<b>This example returns the items from index -4 (included) to index -1 (excluded)</b>
+
+```python
+
+thistuple = ("apple", "banana", "cherry", "orange", "kiwi", "melon", "mango")
+print(thistuple[-4:-1])
+
+```
+<h1>Update Tuples</h1>
+<b>Tuples are unchangeable, meaning that you cannot change, add, or remove items once the tuple is created.</b>
+
+<h3>But there are some workarounds.</h3>
+
+<b>Change Tuple Values</b>
+<ol>
+  <li>Once a tuple is created, you cannot change its values. Tuples are unchangeable, or immutable as it also is called.</li>
+
+  <li>But there is a workaround. You can convert the tuple into a list, change the list, and convert the list back into a tuple.</li>
+</ol>
+
+<h3>Example:</h3>
+<b>Convert the tuple into a list to be able to change it:</b>
+
+```python
+x = ("apple", "banana", "cherry")
+y = list(x)
+y[1] = "kiwi"
+x = tuple(y)
+
+print(x)
+
+```
+<h1>Unpack Tuples</h1>
+<h2>Unpacking a Tuple</h2>
+<b>When we create a tuple, we normally assign values to it. This is called "packing" a tuple:</b>
+
+<b>ExampleGet your own Python Server</b>
+<b>Packing a tuple:</b>
+```python
+fruits = ("apple", "banana", "cherry")
+print(fruits)
+```
+<h2>Using Asterisk*</h2>
+<h3>If the number of variables is less than the number of values, you can add an * to the variable name and the values will be assigned to the variable as a list:</h3>
+
+<b>Example</b>
+<b>Assign the rest of the values as a list called "red":</b>
+
+```python
+
+fruits = ("apple", "banana", "cherry", "strawberry", "raspberry")
+
+(green, yellow, *red) = fruits
+
+print(green)
+print(yellow)
+print(red)
+
+```
+
+<h1>Loop Tuples</h1>
+<h2>Loop Through a Tuple</h2>
+<h3>You can loop through the tuple items by using a for loop.</h3>
+
+<b>ExampleGet your own Python Server</b>
+<b>Iterate through the items and print the values:</b>
+```python
+thistuple = ("apple", "banana", "cherry")
+for x in thistuple:
+  print(x)
+```
+<h1>Loop Through the Index Numbers</h1>
+<h2>You can also loop through the tuple items by referring to their index number.</h2>
+
+<h3>Use the range() and len() functions to create a suitable iterable.</h3>
+
+<b>Example</b>
+<b>Print all items by referring to their index number:</b>
+
+```python
+thistuple = ("apple", "banana", "cherry")
+for i in range(len(thistuple)):
+  print(thistuple[i])
+```
+
+<h1>Join Tuples</h1>
+<h2>Join Two Tuples</h2>
+<b>To join two or more tuples you can use the + operator:</b>
+
+<b>ExampleGet your own Python Server</b>
+<b>Join two tuples:</b>
+
+```python
+tuple1 = ("a", "b" , "c")
+tuple2 = (1, 2, 3)
+
+tuple3 = tuple1 + tuple2
+print(tuple3)
+```
+<h1>Multiply Tuples</h1>
+<h2>If you want to multiply the content of a tuple a given number of times, you can use the * operator:</h2>
+
+<b>Example</b>
+<b>Multiply the fruits tuple by 2:</b>
+
+```python
+fruits = ("apple", "banana", "cherry")
+mytuple = fruits * 2
+
+print(mytuple)
+```
+<h1>Python Lists</h1>
+
+<h2>List</h2>
+<ol>
+ <li>Lists are used to store multiple items in a single variable.</li>
+
+  <li>Lists are one of 4 built-in data types in Python used to store collections of data, the other 3 are Tuple, Set, and Dictionary, all with different qualities and usage.</li>
+
+  <li>Lists are created using square brackets:</li>
+</ol>
+<b>Example:</b>
+<b>Create a List:</b>
+
+
+```python
+
+thislist = ["apple", "banana", "cherry"]
+print(thislist)
+
+```
+
+<h1>List Items</h1>
+<ol>
+ <li>List items are ordered, changeable, and allow duplicate values.</li>
+
+  <li>List items are indexed, the first item has index [0], the second item has index [1] etc.</li>
+
+</ol>
+
+<h1>Ordered</h1>
+<ol>
+  <li>When we say that lists are ordered, it means that the items have a defined order, and that order will not change.</li>
+
+  <li>If you add new items to a list, the new items will be placed at the end of the list.</li>
+</ol>
+
+<h1>Changeable</h1>
+<h2>The list is changeable, meaning that we can change, add, and remove items in a list after it has been created.</h2>
+
+<h1>Allow Duplicates</h1>
+<h2>Since lists are indexed, lists can have items with the same value:</h2>
+
+<h1>Example</h1>
+</h2>Lists allow duplicate values:</h2>
+
+```python
+
+thislist = ["apple", "banana", "cherry", "apple", "cherry"]
+print(thislist)
+
+```
+
+<h1>List Length</h1>
+<h2>To determine how many items a list has, use the len() function:</h2>
+
+<b>Example:</b>
+<b>Print the number of items in the list:</b>
+
+```python
+
+thislist = ["apple", "banana", "cherry"]
+print(len(thislist))
+
+```
+<h1>The list() Constructor</h1>
+<b>It is also possible to use the list() constructor when creating a new list.</b>
+
+<b>Example</b>
+<b>Using the list() constructor to make a List:</b>
+
+```python
+
+thislist = list(("apple", "banana", "cherry")) # note the double round-brackets
+print(thislist)
+
+```
+<h1>Access List Items</h1>
+<h2>Access Items</h2>
+<b>List items are indexed and you can access them by referring to the index number:</b>
+
+<b>Example:</b>
+<b>Print the second item of the list:</b>
+
+```python
+
+thislist = ["apple", "banana", "cherry"]
+print(thislist[1])
+
+```
+<h1>Negative Indexing</h1>
+<h2>Negative indexing means start from the end</h2>
+
+<b>-1 refers to the last item, -2 refers to the second last item etc.</b>
+
+<b>Example</b>
+<b>Print the last item of the list:</b>
+
+
+```python
+thislist = ["apple", "banana", "cherry"]
+print(thislist[-1])
+
+```
+<h1>Range of Indexes</h1>
+<h2>You can specify a range of indexes by specifying where to start and where to end the range.</h2>
+
+<h3>When specifying a range, the return value will be a new list with the specified items.</h3>
+
+<h2>Example:</h2>
+<b>Return the third, fourth, and fifth item:</b>
+
+```python
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+print(thislist[2:5])
+```
+
+<h1>Range of Negative Indexes</h1>
+<h2>Specify negative indexes if you want to start the search from the end of the list:</h2>
+
+<h2>Example:</h2>
+<h3>This example returns the items from "orange" (-4) to, but NOT including "mango" (-1):</h3>
+
+```python
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+print(thislist[-4:-1])
+
+```
+<h1>Change List Items</h1>
+<h1>Change Item Value</h1>
+<h2>To change the value of a specific item, refer to the index number:</h2>
+
+<h3>Example:</h3>
+<b>Change the second item:</b>
+
+```python
+
+thislist = ["apple", "banana", "cherry"]
+thislist[1] = "blackcurrant"
+print(thislist)
+
+```
+<h1>Change a Range of Item Values</h1>
+<h2>To change the value of items within a specific range, define a list with the new values, and refer to the range of index numbers where you want to insert the new values:</h2>
+
+<h3>Example</h3>
+<b>Change the values "banana" and "cherry" with the values "blackcurrant" and "watermelon":</b>
+
+```python
+
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "mango"]
+thislist[1:3] = ["blackcurrant", "watermelon"]
+print(thislist)
+
+```
+
+<h1>Add List Items</h1>
+<h2>Append Items</h2>
+<h3>To add an item to the end of the list, use the append() method:</h3>
+
+<h2>Example:</h2>
+<b>Using the append() method to append an item:</b>
+
+```python
+
+thislist = ["apple", "banana", "cherry"]
+thislist.append("orange")
+print(thislist)
+
+```
+<h1>Insert Items:</h1>
+<h2>To insert a list item at a specified index, use the insert() method.</h2>
+<h3>The insert() method inserts an item at the specified index:</h3>
+
+<h2>Example</h2>
+<b>Insert an item as the second position:</b>
+
+```python
+thislist = ["apple", "banana", "cherry"]
+thislist.insert(1, "orange")
+print(thislist)
+
+```
+
+<h2>Extend List</h2>
+<h3>To append elements from another list to the current list, use the extend() method.</h3>
+
+<h3>Example:</h3>
+<b>Add the elements of tropical to thislist:</b>
+
+```python
+thislist = ["apple", "banana", "cherry"]
+tropical = ["mango", "pineapple", "papaya"]
+thislist.extend(tropical)
+print(thislist)
+```
+
+<h1>Remove List Items</h1>
+<h2>Remove Specified Item</h2>
+<h3>The remove() method removes the specified item.</h3>
+
+<h2>Example:</h2>
+<b>Remove "banana":</b>
+
+```python
+
+thislist = ["apple", "banana", "cherry"]
+thislist.remove("banana")
+print(thislist)
+
+```
+<h1>Remove Specified Index</h1>
+<h2>The pop() method removes the specified index.</h2>
+
+<h3>Example:</h3>
+<b>Remove the second item:</b>
+
+```python
+
+thislist = ["apple", "banana", "cherry"]
+thislist.pop(1)
+print(thislist)
+
+```
+<h2>If you do not specify the index, the pop() method removes the last item.</h2>
+
+<h3>Example</h3>
+<b>Remove the last item:</b>
+
+```python
+
+thislist = ["apple", "banana", "cherry"]
+thislist.pop()
+print(thislist)
+
+```
+<h1>Clear the List</h1>
+<h2>The clear() method empties the list.</h2>
+
+<h3>The list still remains, but it has no content.</h3>
+
+<h3>Example:</h3>
+<b>Clear the list content:</b>
+
+```python
+
+thislist = ["apple", "banana", "cherry"]
+thislist.clear()
+print(thislist)
+
+```
+<h1>Loop Lists</h1>
+<h2>Loop Through a List</h2>
+<h3>You can loop through the list items by using a for loop:</h3>
+
+<h2>Example:</h2>
+<b>Print all items in the list, one by one:</b>
+
+```python
+
+thislist = ["apple", "banana", "cherry"]
+for x in thislist:
+
+  print(x)
+```
+
+
+<h1>List Comprehension</h1>
+<h2>List Comprehension</h2>
+<h3>List comprehension offers a shorter syntax when you want to create a new list based on the values of an existing list.</h3>
+
+<h2>Example:</h2>
+
+<ol>
+    <li>Based on a list of fruits, you want a new list, containing only the fruits with the letter "a" in the name.</li>
+    <li>Without list comprehension you will have to write a for statement with a conditional test inside:</li>
+</ol>
+
+<h1>Example</h1>
+
+
+```python
+
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+newlist = []
+
+for x in fruits:
+  if "a" in x:
+    newlist.append(x)
+
+print(newlist)
+
+```
+<h1>Sort Lists</h1>
+<h2>Sort List Alphanumerically</h2>
+<h3>List objects have a sort() method that will sort the list alphanumerically, ascending, by default:</h3>
+
+<h2>Example:</h2>
+<b>Sort the list alphabetically:</b>
+
+
+
+```python
+
+thislist = ["orange", "mango", "kiwi", "pineapple", "banana"]
+thislist.sort()
+print(thislist)
+
+```
+<h1>Sort Descending</h1>
+<h2>To sort descending, use the keyword argument reverse = True:</h2>
+
+<h3>Example:</h3>
+<b>Sort the list descending:</b>
+
+```python
+
+thislist = ["orange", "mango", "kiwi", "pineapple", "banana"]
+thislist.sort(reverse = True)
+print(thislist)
+
+```
+
+<h1>Copy a List</h1>
+
+<h1>Use the copy() method</h1>
+<h2>You can use the built-in List method copy() to copy a list.</h2>
+
+<h3>Example:<h3>
+<b>Make a copy of a list with the copy() method:</b>
+
+```python
+
+thislist = ["apple", "banana", "cherry"]
+mylist = thislist.copy()
+print(mylist)
+
+```
+<h1>Use the slice Operator</h1>
+<h2>You can also make a copy of a list by using the : (slice) operator.</h2>
+
+<h2>Example:</h2>
+<b>Make a copy of a list with the : operator:</b>
+
+```python
+
+thislist = ["apple", "banana", "cherry"]
+mylist = thislist[:]
+print(mylist)
+
+```
+
+
 

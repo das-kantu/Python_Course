@@ -351,5 +351,253 @@ myfamily = {
 print(myfamily)
 
 ```
+<h1>Python Sets</h1>
+
+<h1>Set</h1>
+<h2>Sets are used to store multiple items in a single variable.</h2>
+
+<h3>Set is one of 4 built-in data types in Python used to store collections of data, the other 3 are List, Tuple, and Dictionary, all with different qualities and usage</h3>.
+
+<b>A set is a collection which is unordered, unchangeable*, and unindexed.</b>
+
+<b>* Note: Set items are unchangeable, but you can remove items and add new items.</b>
+
+<b>Sets are written with curly brackets.</b>
+
+<b>ExampleGet your own Python Server</b>
+<h3>Create a Set:</h3>
+
+```python
+thisset = {"apple", "banana", "cherry"}
+print(thisset)
+```
+
+<h1>Set Items</h1>
+<h2>Set items are unordered, unchangeable, and do not allow duplicate values.</h2>
+
+<h1>Unordered</h1>
+<h2>Unordered means that the items in a set do not have a defined order.</h2>
+
+<h1>Set items can appear in a different order every time you use them, and cannot be referred to by index or key.</h1>
+
+<h1>Unchangeable</h1>
+<h2>Set items are unchangeable, meaning that we cannot change the items after the set has been created.</h2>
+<b>Set items are unchangeable, meaning that we cannot change the items after the set has been created.</b>
+
+<h1>Duplicates Not Allowed</h1>
+<b>Sets cannot have two items with the same value.</b>
+
+<h1>Example</h1>
+<b>Duplicate values will be ignored:</b>
+
+```python
+thisset = {"apple", "banana", "cherry", "apple"}
+
+print(thisset)
+
+
+```
+
+<h1>Get the Length of a Set</h1>
+<h2>To determine how many items a set has, use the len() function.</h2>
+
+<b>Example</b>
+<h2>Get the number of items in a set:</h2>
+
+
+```python
+thisset = {"apple", "banana", "cherry"}
+
+print(len(thisset))
+
+
+```
+
+<h1>Access Set Items</h1>
+<h2>Access Items</h2>
+<b>You cannot access items in a set by referring to an index or a key.</b>
+
+<b>But you can loop through the set items using a for loop, or ask if a specified value is present in a set, by using the in keyword.</b>
+
+<h3>ExampleGet your own Python Server</h3>
+<b>Loop through the set, and print the values:</b>
+
+```python
+thisset = {"apple", "banana", "cherry"}
+for x in thisset:
+    print(x)
+
+
+```
+
+<h1>Add Set Items</h1>
+<h2>Add Items</h2>
+<b>Once a set is created, you cannot change its items, but you can add new items.</b>
+
+<h3>To add one item to a set use the add() method.</h3>
+
+<b>Add an item to a set, using the add() method:</b>
+
+<h2>Example:</h2>
+
+<b>Add an item to a set, using the add() method:</b>
+
+```python
+thisset = {"apple", "banana", "cherry"}
+
+thisset.add("orange")
+
+print(thisset)
+```
+<h1>Add Sets</h1>
+<h2>To add items from another set into the current set, use the update() method.</h2>
+
+<h3>Example</h3>
+<b>Add elements from tropical into thisset:</b>
+
+```python 
+thisset = {"apple", "banana", "cherry"}
+tropical = {"pineapple", "mango", "papaya"}
+
+thisset.update(tropical)
+
+print(thisset)
+```
+
+<h1>Remove Set Items</h1>
+<h2>Remove Item</h2>
+<h3>To remove an item in a set, use the remove(), or the discard() method.</h3>
+
+<b>ExampleGet your own Python Server</b>
+<b>Remove "banana" by using the remove() method:</b>
+```python
+thisset = {"apple", "banana", "cherry"}
+
+thisset.remove("banana")
+
+print(thisset)
+
+```
+<h1>Join Sets</h1>
+<ol>
+  
+ <li>There are several ways to join two or more sets in Python.</li>
+
+<li>The union() and update() methods joins all items from both sets.</li>
+
+<li>The intersection() method keeps ONLY the duplicates.</li>
+
+<li>The difference() method keeps the items from the first set that are not in the other set(s).</li>
+
+<li>The symmetric_difference() method keeps all items EXCEPT the duplicates.</li>
+</ol>
+
+<h2>Union</h2>
+<h3>The union() method returns a new set with all items from both sets.</h3>
+
+<b>Example:</b>
+<b>Join set1 and set2 into a new set:</b>
+
+```python
+set1 = {"a", "b", "c"}
+set2 = {1, 2, 3}
+
+set3 = set1.union(set2)
+print(set3)
+
+```
+
+<h1>You can use the | operator instead of the union() method, and you will get the same result.</h1>
+
+<b>Example</b>
+<b>Use | to join two sets:</b>
+
+```python
+set1 = {"a", "b", "c"}
+set2 = {1, 2, 3}
+
+set3 = set1 | set2
+print(set3)
+```
+
+<h2>Join Multiple Sets</h2>
+<h3>All the joining methods and operators can be used to join multiple sets.</h3>
+
+<b>When using a method, just add more sets in the parentheses, separated by commas:</b>
+
+<b>Example</b>
+<b>Join multiple sets with the union() method:</b>
+
+```python
+set1 = {"a", "b", "c"}
+set2 = {1, 2, 3}
+set3 = {"John", "Elena"}
+set4 = {"apple", "bananas", "cherry"}
+
+myset = set1.union(set2, set3, set4)
+print(myset)
+
+```
+
+<h1>Intersection</h1>
+<ol>
+
+  <li>Keep ONLY the duplicates</li>
+
+  <li>The intersection() method will return a new set, that only contains the items that are present in both sets.</li>
+</ol>
+<b>Example</b>
+<b>Join set1 and set2, but keep only the duplicates:</b>
+
+```python
+
+set1 = {"apple", "banana", "cherry"}
+set2 = {"google", "microsoft", "apple"}
+
+set3 = set1.intersection(set2)
+print(set3)
+
+```
+
+<h1>You can use the & operator instead of the intersection() method, and you will get the same result.</h1>
+
+<b>Example</b>
+<b>Use & to join two sets:</b>
+
+```python
+set1 = {"apple", "banana", "cherry"}
+set2 = {"google", "microsoft", "apple"}
+
+set3 = set1 & set2
+print(set3)
+
+```
+<h1>Difference</h1>
+<b>The difference() method will return a new set that will contain only the items from the first set that are not present in the other set.</b>
+
+<b>Example</b>
+<b>Keep all items from set1 that are not in set2:</b>
+
+```python
+set1 = {"apple", "banana", "cherry"}
+set2 = {"google", "microsoft", "apple"}
+
+set3 = set1.difference(set2)
+
+print(set3)
+```
+
+<h1>Python Tuples</h1>
+
+<h2>Tuple</h2>
+<ol>
+  <li>Tuples are used to store multiple items in a single variable.</li>
+
+  <li>Tuple is one of 4 built-in data types in Python used to store collections of data, the other 3 are List, Set, and Dictionary, all with different qualities and usage.</li>
+
+  <li>A tuple is a collection which is ordered and unchangeable.</li>
+
+  <li>Tuples are written with round brackets.</li>
+  </ol>
 
 
